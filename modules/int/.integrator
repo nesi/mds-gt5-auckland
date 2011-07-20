@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+use strict;
+use File::Basename;
+use lib::utilityfunctions;
+
+# Copyright © 2005-2006 Grid Research and educatiOn group @ IoWa (GROW), The University of Iowa, IA. All rights reserved.
+# For more information please contact: GROW team grow-tech@grow.uiowa.edu
+
+my ($cluster,$uid,$configdir)=($ARGV[0],$ARGV[1],$ARGV[2]);
+
+my ($file,$fn,$fnode,$fcluster,$fuid,$blank,$time);
+my ($root,@filelist,%config,$int_cache,$file_age);
+
+$root=basename($0);
+
+%config=do "$configdir/int-conf.pl";
+$int_cache=$config{int_cache};
+$file_age=$config{file_age};
+
+@filelist=listmodules("$int_cache/$root");
+
+$time=time;
+foreach $file (@filelist) {
+	$fn=basename($file);
+	($blank,$fnode,$fcluster,$fuid)=split(/\*\*\*/,$fn);
+	my $ft=(stat($file))[9];
+	if($ft+$file_age lt $time) {
+		unlink($file); # File is more than $file_age seconds old, remove
+	}
+	elsif($fuid eq $uid and $fcluster eq $cluster) {
+		open(FILE, "< $file" ) or die "Can't open $file : $!";
+		while( <FILE> ) {
+			print;
+		}
+		close FILE;
+	}
+}
+
+

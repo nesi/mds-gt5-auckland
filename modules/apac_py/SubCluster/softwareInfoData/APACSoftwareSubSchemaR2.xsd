@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- Software definition portion of GLUE Schema 1.2 - mapping to XML Schema                  -->
+<!-- Author: Ronald Jones (ronald.jones@ivec.org) -->
+<!-- Institution: iVEC - Australia                     -->
+<!-- License: see LICENSE file for EGEE Middleware      -->
+<!-- Revision number: 1 date: 9 Jan 2007                -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ivec.org/softwareSubSchema/Spec/V12/R2" xmlns:apac="http://grid.apac.edu.au/glueschema/Spec/V12/R2" xmlns:glue="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" targetNamespace="http://www.ivec.org/softwareSubSchema/Spec/V12/R2" elementFormDefault="qualified">
+	<!-- Lets include the original (official) GLUE 1.2 schema, modified to use a SubClusterType -->
+	<!-- Now lets define the SoftwarePackage type. -->
+	<!--<xs:include schemaLocation="APACGLUESchema12R2.xsd"/>-->
+	<xs:import namespace="http://grid.apac.edu.au/glueschema/Spec/V12/R2" schemaLocation="file:///usr/local/share/APACGLUESchema12R2.xsd"/>
+        <xs:import namespace="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" schemaLocation="file:///usr/local/share/GLUESchema12R2.xsd"/>
+	<xs:complexType name="SoftwarePackagesType">
+		<xs:sequence>
+			<xs:element ref="apac:SoftwarePackage" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="SoftwarePackages" type="SoftwarePackagesType"/>
+</xs:schema>

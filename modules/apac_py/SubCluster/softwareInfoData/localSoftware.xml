@@ -1,0 +1,121 @@
+<SoftwarePackages xmlns:glue="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2"
+  xmlns:apac="http://grid.apac.edu.au/glueschema/Spec/V12/R2"
+  xmlns="http://www.ivec.org/softwareSubSchema/Spec/V12/R2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.ivec.org/softwareSubSchema/Spec/V12/R2 APACSoftwareSubSchemaR2.xsd">
+
+
+              <SoftwarePackage LocalID="UnixCommands/coreutils-5.2.1-31.7" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>UnixCommands</Name>
+          <Version>coreutils-5.2.1-31.7</Version>
+          <Module>UnixCommands/coreutils-5.2.1-31.7</Module>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-cat">
+            <Name>cat</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-diff">
+            <Name>diff</Name>
+            <Path>/usr/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-echo">
+            <Name>echo</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-ls">
+            <Name>ls</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-pwd">
+            <Name>pwd</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+        <SoftwarePackage LocalID="BEAST/1.6.1" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>BEAST</Name>
+          <Version>1.6.1</Version>
+          <Module>BEAST/1.6.1</Module>
+          <SoftwareExecutable LocalID="BEAST/1.6.1-sequential">
+            <Name>beast</Name>
+            <Path>/usr/local/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+	<SoftwarePackage LocalID="python/2.6" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>python</Name>
+          <Version>2.6</Version>
+          <Module>python2.6</Module>
+          <SoftwareExecutable LocalID="python/2.6">
+            <Name>python2.6</Name>
+            <Path>/opt/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+	  <SoftwarePackage LocalID="R/2.10.0" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>R</Name>
+          <Version>2.10.0</Version>
+          <Module>R/2.10.0</Module>
+          <SoftwareExecutable LocalID="R/2.10.0">
+            <Name>R</Name>
+            <Path>/usr/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+	  <SoftwarePackage LocalID="octave/3.0.5" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>octave</Name>
+          <Version>3.0.5</Version>
+          <Module>octave/3.0.5</Module>
+          <SoftwareExecutable LocalID="octave/3.0.5">
+            <Name>octave</Name>
+            <Path>/usr/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+        <SoftwarePackage LocalID="Gold/5.1" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>Gold</Name>
+          <Version>5.1</Version>
+<!--          <ACL>
+            <glue:Rule>/nz/virtual-screening</glue:Rule>
+          </ACL>
+-->
+          <SoftwareExecutable LocalID="Gold/5.1">
+            <Name>parallel_gold_auto</Name>
+            <Path>/share/apps/goldsuite-5.1/bin</Path>
+            <SerialAvail>false</SerialAvail>
+            <ParallelAvail>true</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+    <SoftwarePackage LocalID="MrBayes/3.1.2" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+                <Name>MrBayes</Name>
+                <Version>3.1.2</Version>
+                <Module>mrbayes/3.1.2</Module>
+                <SoftwareExecutable LocalID="mrbayes-parallel">
+                        <Name>mb</Name>
+                        <Path>/opt/bio/mrbayes</Path>
+                        <SerialAvail>false</SerialAvail>
+                        <ParallelAvail>true</ParallelAvail>
+                </SoftwareExecutable>
+        </SoftwarePackage>
+
+
+
+</SoftwarePackages>
